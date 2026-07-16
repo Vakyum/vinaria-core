@@ -1,22 +1,16 @@
 package fr.vakyum.vinariaCore;
 
-import fr.vakyum.vinariaCore.commands.lobbyCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class VinariaCore extends JavaPlugin {
-
-    private static VinariaCore instance;
+public final class VinariaCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        instance = this;
-
-        getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
-
-        getCommand("lobby").setExecutor(new lobbyCommand());
+        // Plugin startup logic
     }
 
-    public static VinariaCore getInstance() {
-        return instance;
+    @Override
+    public void onDisable() {
+        // Plugin shutdown logic
     }
 }

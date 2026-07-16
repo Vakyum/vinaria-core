@@ -4,11 +4,3 @@ version: '${version}'
 main: fr.vakyum.vinariaCore.VinariaCore
 api-version: '1.21.7'
 load: POSTWORLD
-commands:
-  lobby:
-    description: Commande de retour au lobby manuel.
-    aliases:
-      - hub
-
-channels:
-  - BungeeCord
