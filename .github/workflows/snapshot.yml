@@ -26,7 +26,7 @@ jobs:
       - name: Create snapshot tag
         run: |
           git tag v1.0.0-SNAPSHOT.${{ steps.sha.outputs.short_sha }}
-          git push origin v1.2.0-SNAPSHOT.${{ steps.sha.outputs.short_sha }}
+          git push origin v1.0.0-SNAPSHOT.${{ steps.sha.outputs.short_sha }}
 
       - name: Create GitHub Release (pre-release)
         uses: softprops/action-gh-release@v2
