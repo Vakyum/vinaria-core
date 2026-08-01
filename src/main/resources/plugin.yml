@@ -9,6 +9,10 @@ commands:
     description: Commande de retour au lobby manuel.
     aliases:
       - hub
+  broadcast:
+    description: Affiche un message à destination de tout les joueurs sur un serveur backend.
+    aliases:
+      - bc
 
 channels:
   - BungeeCord
