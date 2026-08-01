@@ -15,7 +15,7 @@ public class PlayerListeners implements Listener {
         Player player = event.getPlayer();
         Component component = Component.text("[", NamedTextColor.DARK_GRAY)
                 .append(Component.text("+", NamedTextColor.GREEN, TextDecoration.BOLD))
-                .append(Component.text("]" + player.getName(), NamedTextColor.DARK_GRAY));
+                .append(Component.text("] " + player.getName(), NamedTextColor.DARK_GRAY));
         event.joinMessage(component);
     }
 
@@ -23,8 +23,8 @@ public class PlayerListeners implements Listener {
     public void onQuit(PlayerQuitEvent event){
         Player player = event.getPlayer();
         Component component = Component.text("[", NamedTextColor.DARK_GRAY)
-                .append(Component.text("+", NamedTextColor.RED, TextDecoration.BOLD))
-                .append(Component.text("]" + player.getName(), NamedTextColor.DARK_GRAY));
+                .append(Component.text("-", NamedTextColor.RED, TextDecoration.BOLD))
+                .append(Component.text("] " + player.getName(), NamedTextColor.DARK_GRAY));
         event.quitMessage(component);
     }
 }
