@@ -1,5 +1,6 @@
 package fr.vakyum.vinariaCore;
 
+import fr.vakyum.vinariaCore.commands.BroadcastCommand;
 import fr.vakyum.vinariaCore.commands.lobbyCommand;
 import fr.vakyum.vinariaCore.listeners.PlayerListeners;
 import org.bukkit.Bukkit;
@@ -19,6 +20,8 @@ public class VinariaCore extends JavaPlugin {
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         getCommand("lobby").setExecutor(new lobbyCommand());
+
+        getCommand("broadcast").setExecutor(new BroadcastCommand());
 
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new PlayerListeners(), this);
